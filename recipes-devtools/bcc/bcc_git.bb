@@ -37,7 +37,7 @@ EXTRA_OECMAKE = " \
 
 FILES_${PN} += "${PYTHON_SITEPACKAGES_DIR}"
 
-do_install_append() {
+do_install:append() {
      find ${D}${datadir} -type f -exec sed -i {} -e 's,#!/usr/bin/python,#!/usr/bin/env python3,' \;
 }
 

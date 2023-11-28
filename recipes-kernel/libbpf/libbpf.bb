@@ -59,7 +59,7 @@ do_compile() {
 }
 
 
-python do_package_prepend() {
+python do_package:prepend() {
     d.setVar('PKGV', d.getVar("KERNEL_VERSION", True).split("-")[0])
 }
 
